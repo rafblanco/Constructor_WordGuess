@@ -16,7 +16,7 @@ function randomWord() {
 }
 
 function newWord() {
-    chosenWord= []
+    chosenWord = []
     matchedLetters = []
     lettersPicked = []
     guesses = 10;
@@ -54,7 +54,6 @@ function userInput() {
     ])
         .then(function (response) {
             var guessedChar = response.guess
-            // Make conditional that checks if user already played letter
             if (lettersPicked.indexOf(guessedChar) > -1) {
                 console.log("Letter has been already picked. Try again!")
                 userInput()
